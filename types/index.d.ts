@@ -1,4 +1,8 @@
-import { Data as UnistData, Literal as UnistLiteral, Parent as UnistParent } from 'unist';
+import {
+  Data as UnistData,
+  Literal as UnistLiteral,
+  Parent as UnistParent,
+} from 'unist';
 
 /** All nodes can contain additional data. */
 export interface Data extends UnistData {
@@ -16,7 +20,6 @@ export interface Parent extends UnistParent {
   /** Additional data maybe attached. */
   data?: Data;
 }
-
 
 /**
  * Literal is an abstract node containing a value property.
@@ -38,7 +41,7 @@ export interface Table extends Parent {
   /** Table node type. */
   type: 'table';
   /** Can only contain Rows for children. */
-  children: Array<Row>;
+  children: Row[];
 }
 
 /**
@@ -77,5 +80,5 @@ export interface Row extends Parent {
   /** Index of Row in relation to other Rows in a Table. */
   index: number;
   /** Can only contain Cells or Columns for children. */
-  children: Array<Cell | Column>
+  children: Array<Cell | Column>;
 }

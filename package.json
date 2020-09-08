@@ -30,7 +30,9 @@
   "files": [
     "types"
   ],
-  "dependencies": {},
+  "dependencies": {
+    "@types/unist": "^2.0.3"
+  },
   "devDependencies": {
     "husky": "^4.3.0",
     "microbundle": "^0.12.3",

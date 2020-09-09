@@ -51,6 +51,10 @@ export interface Table extends Parent {
 export interface Cell extends Literal {
   /** Cell node type. */
   type: 'cell';
+  /** Tracks which Column the Cell belongs to */
+  columnIndex: number;
+  /** Tracks which Row the Cell belongs to */
+  rowIndex: number;
 }
 
 /**
